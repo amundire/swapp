@@ -3,7 +3,7 @@ import { Redirect } from 'react-router';
 import { AUTH_MUTATION } from '../../../api/requester';
 import { useQuery } from '@apollo/react-hooks';
 
-const SignIn = (props) => {
+const SignIn = () => {
     const isAuth = useQuery(AUTH_MUTATION).data;
     console.log(isAuth.authenticated);
     if(!isAuth.authenticated){

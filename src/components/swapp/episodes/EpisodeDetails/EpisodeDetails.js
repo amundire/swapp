@@ -11,7 +11,9 @@ const EpisodesDetails = () => {
     });
 
     if (loading) return  <p>Loading...</p>;
-    if (error) return <p>Error on getting episode</p>;
+    if (error) return <p>Error getting episode</p>;
+
+    //todo: add people
     
     return (
     <section id="episodeDetails">
