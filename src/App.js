@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Home from './components/welcome/Home/Home';
+import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import { ApolloProvider } from '@apollo/react-hooks';
+import SignIn from './components/welcome/SignIn/SignIn';
+import EpisodesPage from './components/swapp/episodes/EpisodesPage/EpisodesPage';
+import EpisodeDetails from './components/swapp/episodes/EpisodeDetails/EpisodeDetails';
+import client from './api'
 
-function App() {
+const App = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ApolloProvider client={client}>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact component={Home} {...props}/>
+          <Route path="/login" exact component={SignIn}/>
+          <Route path="/episodes" exact component={EpisodesPage}/>
+          <Route path="/episodes/:id" exact component={EpisodeDetails}/>
+        </Switch>
+      </BrowserRouter>
+    </ApolloProvider>
   );
 }
 
