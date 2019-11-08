@@ -4,7 +4,7 @@ import { createHttpLink } from 'apollo-link-http';
 import authLink from './auth';
 import { typeDefs } from './local';
 
-const endpoint = 'http://softuni-swapp-212366186.eu-west-1.elb.amazonaws.com/graphql';
+const endpoint = 'https://swapp.st6.io/graphql';
 
 const httpLink = createHttpLink({
     uri: endpoint
