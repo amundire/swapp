@@ -3,12 +3,12 @@ import { Link as RouterLink } from 'react-router-dom';
 import { Link } from 'rebass';
 
 
-const Character = props => {
+const Character = ({ id, name, image })=> {
     return (
-        <Link as={RouterLink} to={`/characters/${props.id}`} key={props.id} id={props.id}>
+        <Link as={RouterLink} to={`/characters/${id}`} key={id} id={id}>
             <div className="charactersElement">
-                <p>{props.name}</p>
-                <img src={props.image}></img>
+                <p>{name}</p>
+                <img src={image}></img>
             </div>
         </Link>
     )

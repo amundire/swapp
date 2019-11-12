@@ -1,18 +1,18 @@
 import React from 'react';
-import { Redirect } from 'react-router';
-import { AUTH_MUTATION } from '../../../api/requester';
+import { AUTH_MUTATION } from './api/requester';
 import { useQuery } from '@apollo/react-hooks';
+import Signin from './Signin';
+import Pages from './pages/index';
 
 const SignIn = () => {
     const isAuth = useQuery(AUTH_MUTATION).data;
-    console.log(isAuth.authenticated);
     if(!isAuth.authenticated){
         return (
-            <Redirect to="/login"/>
+            <Signin/>
         )
     }else{
         return (
-            <Redirect to="/episodes"/>
+            <Pages/>
         )
     }
 }

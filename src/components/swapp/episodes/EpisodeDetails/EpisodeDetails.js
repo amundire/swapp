@@ -1,26 +1,17 @@
 import React from 'react';
-import { useQuery } from '@apollo/react-hooks';
-import { EPISODE_QUERY } from '../../../../api/swapp/episode-requester';
-import { useParams } from 'react-router-dom';
+import Character from '../../characters/Character/Character';
 
-const EpisodesDetails = () => {
-    let { id } = useParams();
-
-    const { loading, error, data } = useQuery(EPISODE_QUERY, {
-        variables: { episodeId: id, first: 5 },
-    });
-
-    if (loading) return  <p>Loading...</p>;
-    if (error) return <p>Error getting episode</p>;
-
-    //todo: add people
-    
+const EpisodesDetails = ({episode, people, loadMore}) => {
     return (
     <section id="episodeDetails">
-        <div className="episodeDetailsTitle">{data.episode.title}</div>
-        <img src={data.episode.image}></img>
-        <div className="episodeDetailsDirector">{data.episode.director}</div>
-        <div className="episodeDetailsDate">{data.episode.releaseDate}</div>
+        <div className="episodeDetailsTitle">{episode.title}</div>
+        <img src={episode.image}></img>
+        <div className="episodeDetailsDirector">{episode.director}</div>
+        <div className="episodeDetailsDate">{episode.releaseDate}</div>
+        <div className="episodeCharacters">
+        {people.map(person => <Character id={person.node.id} image={person.node.image} name={person.node.name}/>)}
+        <button onClick={loadMore}>Load More</button>
+        </div>
     </section>
     )
 }

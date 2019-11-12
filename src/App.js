@@ -1,35 +1,27 @@
 import React from 'react';
 import './App.css';
-import Home from './components/welcome/Home/Home';
-import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import Home from './Home';
+import { BrowserRouter } from 'react-router-dom';
 import { ApolloProvider } from '@apollo/react-hooks';
-import SignIn from './components/welcome/SignIn/SignIn';
-import EpisodesPage from './components/swapp/episodes/EpisodesPage/EpisodesPage';
-import EpisodeDetails from './components/swapp/episodes/EpisodeDetails/EpisodeDetails';
-import client from './api'
-import CharactersPage from './components/swapp/characters/CharactersPage/CharactersPage';
-import CharacterDetails from './components/swapp/characters/CharacterDetails/CharacterDetails';
-import StarshipDetails from './components/swapp/starships/StarshipDetails/StarshipDetails';
+import client from './api/index';
 
-const App = (props) => {
+const App = () => {
 
-  //todo: seperate presentational logic so it doesn't look Pepega
-  //todo: add theme
-  //todo: protect the routes
-  //todo: add a way to navbar
+  //todo: fix navigation routes to use the correct links in their respective routes
+  //todo: stylize this white page garbage
+  //todo: add theme toggling
+  //todo: add a way to navigate into /characters and /episode
+  //todo: add a way to logout without having to delete localstorage
+  //todo: why tf is logging in not redirecting
+  //todo: tests
+  //todo: remove unused imports
+  //todo: lint
+  //todo: remove todo's
 
   return (
     <ApolloProvider client={client}>
       <BrowserRouter>
-        <Switch>
-          <Route path="/" exact component={Home} {...props}/>
-          <Route path="/login" exact component={SignIn}/>
-          <Route path="/episodes" exact component={EpisodesPage}/>
-          <Route path="/episodes/:id" exact component={EpisodeDetails}/>
-          <Route path="/characters" exact component={CharactersPage}/>
-          <Route path="/characters/:id" exact component={CharacterDetails}/>
-          <Route path="/starships/:id" exact component={StarshipDetails}/>
-        </Switch>
+        <Home />
       </BrowserRouter>
     </ApolloProvider>
   );
