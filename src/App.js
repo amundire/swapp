@@ -7,12 +7,11 @@ import client from './api/index';
 
 const App = () => {
 
-  //todo: fix navigation routes to use the correct links in their respective routes
   //todo: stylize this white page garbage
   //todo: add theme toggling
-  //todo: add a way to navigate into /characters and /episode
+  //todo: add a way to navigate into /characters and /episodes
   //todo: add a way to logout without having to delete localstorage
-  //todo: why tf is logging in not redirecting
+  //todo: finish starship details page + add the radarchart component
   //todo: tests
   //todo: remove unused imports
   //todo: lint

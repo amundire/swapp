@@ -1,20 +1,33 @@
 import React from 'react';
-import { AUTH_MUTATION } from './api/requester';
 import { useQuery } from '@apollo/react-hooks';
+import gql from 'graphql-tag.macro';
 import Signin from './Signin';
 import Pages from './pages/index';
+import Header from './components/common/Header';
+import { Redirect } from 'react-router-dom';
 
-const SignIn = () => {
+export const AUTH_MUTATION = gql`
+  query IsAuthenticated {
+    authenticated @client
+  }
+`;
+
+const Home = () => {
     const isAuth = useQuery(AUTH_MUTATION).data;
-    if(!isAuth.authenticated){
-        return (
-            <Signin/>
-        )
-    }else{
-        return (
-            <Pages/>
-        )
-    }
+
+    return isAuth.authenticated ?
+        (
+            <>
+                <Header />
+                <Pages />
+                <Redirect to="/episodes" />
+            </>
+        ) : (
+            <>
+                <Signin />
+                <Redirect to="/login" />
+            </>
+        );
 }
 
-export default SignIn;
+export default Home;

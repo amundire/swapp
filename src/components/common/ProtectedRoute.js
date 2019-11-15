@@ -1,23 +1,29 @@
 import React from "react";
 import { useQuery } from "@apollo/react-hooks";
-import { Redirect } from "react-router-dom";
 import gql from "graphql-tag.macro";
 import Signin from "../../Signin";
+import { Redirect } from "react-router-dom";
 
-export const AUTHENTICATED_QUERY = gql`
-  query IsAuthenticated {
+export const AUTH_MUTATION = gql`
+  query IsAuth {
     authenticated @client
   }
 `;
 
 const ProtectedRoute = props => {
-    const { data } = useQuery(AUTHENTICATED_QUERY);
+  const { data } = useQuery(AUTH_MUTATION);
 
-    if (data.authenticated) {
-        return props.children;
-    } else {
-        return <Signin />
-    }
+  if (data.authenticated) {
+    return props.children;
+  } else {
+    return (
+      <>
+        <Signin />
+        <Redirect to="/login" />
+      </>
+    )
+
+  }
 };
 
 export default ProtectedRoute;

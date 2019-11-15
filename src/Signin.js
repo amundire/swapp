@@ -4,7 +4,7 @@ import { SIGN_IN_MUTATION } from './api/requester';
 import { Redirect } from 'react-router-dom';
 
 
-const Signin = (props) => {
+const Signin = () => {
     const [inputEmail, setEmail] = useState("");
     const [inputPassword, setPassword] = useState("");
 
@@ -15,8 +15,9 @@ const Signin = (props) => {
                 token: loginData
             };
             localStorage.setItem('token', JSON.stringify(user.token));
-            client.writeData({ data: { authenicated: true } });
-            return <Redirect to="/"/>
+            //learn how to spell authenticated you autist
+            client.writeData({ data: { authenticated: true } });
+            return <Redirect to="/episodes"/>
         }
     });
 
