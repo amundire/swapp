@@ -4,8 +4,6 @@ import { STARSHIP_QUERY } from '../../../api/swapp/starship-requester';
 import { useParams } from 'react-router-dom';
 import StarshipDetails from "../../../components/swapp/starships/StarshipDetails/StarshipDetails";
 
-//figure this out
-
 const StarshipDetailsPage = () => {
     const { starshipId } = useParams();
     console.log(starshipId);

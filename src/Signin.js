@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useApolloClient, useMutation } from '@apollo/react-hooks';
 import { SIGN_IN_MUTATION } from './api/requester';
-import { Redirect } from 'react-router-dom';
 
 
 const Signin = () => {
@@ -17,7 +16,6 @@ const Signin = () => {
             localStorage.setItem('token', JSON.stringify(user.token));
             //learn how to spell authenticated you autist
             client.writeData({ data: { authenticated: true } });
-            return <Redirect to="/episodes"/>
         }
     });
 

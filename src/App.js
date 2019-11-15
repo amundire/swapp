@@ -9,8 +9,6 @@ const App = () => {
 
   //todo: stylize this white page garbage
   //todo: add theme toggling
-  //todo: add a way to navigate into /characters and /episodes
-  //todo: add a way to logout without having to delete localstorage
   //todo: finish starship details page + add the radarchart component
   //todo: tests
   //todo: remove unused imports
