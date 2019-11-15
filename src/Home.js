@@ -15,16 +15,29 @@ export const AUTH_MUTATION = gql`
 const Home = () => {
     const isAuth = useQuery(AUTH_MUTATION).data;
 
+    const storedTheme = localStorage.getItem('theme');
+    let [theme, setTheme] = React.useState(storedTheme || 'lightTheme');
+
+    const themeToggle = () => {
+        const newTheme = theme === 'lightTheme' ? 'darkTheme' : 'lightTheme';
+        localStorage.setItem('theme', newTheme);
+        setTheme(newTheme);
+    };
+
+    React.useEffect(() => {
+        document.body.classList = theme;
+    }, [theme]);
+
     return isAuth.authenticated ?
         (
             <>
-                <Header />
+                <Header themeToggle={themeToggle} />
                 <Pages />
                 <Redirect to="/episodes" />
             </>
         ) : (
             <>
-                <Signin />
+                <Signin themeToggle={themeToggle} />
                 <Redirect to="/login" />
             </>
         );

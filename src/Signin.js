@@ -3,7 +3,7 @@ import { useApolloClient, useMutation } from '@apollo/react-hooks';
 import { SIGN_IN_MUTATION } from './api/requester';
 
 
-const Signin = () => {
+const Signin = (props) => {
     const [inputEmail, setEmail] = useState("");
     const [inputPassword, setPassword] = useState("");
 
@@ -24,8 +24,9 @@ const Signin = () => {
         login({ variables: { email: inputEmail, password: inputPassword } });
     }
 
-    const onLoginThemeTextClick = () => {
-        console.log("login theme button clicked");
+    const onLoginThemeTextClick = (e) => {
+        e.preventDefault();
+        props.themeToggle();
     }
 
     return (
