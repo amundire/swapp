@@ -195,6 +195,7 @@ body.darkTheme{
     max-width: 15rem;
     margin: 4rem;
     background: var(--cardBgrcolor);
+    border-radius: 15px;
 }
 
 .charactersElement a{
@@ -237,4 +238,95 @@ body.darkTheme{
 .charactersList a:visited{
     color: var(--primaryHeading);
     text-decoration: none;
+}
+
+.characterDetailsDivisor{
+    display: flex;
+}
+
+.characterDetailsDivisor > div{
+    width: 50%;
+}
+
+.starshipElement{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: var(--cardBgrcolor);
+    margin: 0.5rem;
+    border-radius: 10px;
+}
+
+.starshipElement > a {
+    text-align: center;
+    color: var(--Fontcolor);
+}
+
+.starshipElement > img {
+    width: 20%; 
+}
+
+.characterDetailsRight{
+    width: 65% !important;
+}
+
+.characterDetailsRight > ul{
+    width: 85%;
+}
+
+.characterDetailsRight > ul > div{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.characterDetailsRight > ul > div > img{
+    width: 15%;
+}
+
+.characterDetailsRight > ul > div > a{
+    width: 85%;
+    color: var(--primaryHeading);
+}
+
+.characterDetailsRight > ul > div > a:link{
+    text-decoration: none;
+}
+.characterDetailsRight > ul > div > a:active{
+    text-decoration: none;
+}
+.characterDetailsRight > ul > div > a:visited{
+    text-decoration: none;
+}
+
+.starshipsTitle{
+    text-align: center;
+}
+
+.characterDetailsName{
+    text-align: center;
+    color: var(--primaryHeading);
+    font-size: 2rem;
+}
+
+.characterDetailsLeft{
+    display: flex;
+    flex-direction: column;
+    margin: 4rem;
+    background-color: var(--cardBgrcolor);
+    padding: 1rem;
+    width: 35% !important;
+    border-radius: 10px;
+}
+
+.characterDetailsLeft > img {
+    max-height: 15rem;
+    max-width: 15rem;
+    margin: 2rem auto;
+}
+
+.characterDetailsLeft > div{
+    color: var(--primaryHeading);
+}
+
+.starshipsTitle{
+    color: var(--Fontcolor);
 }
