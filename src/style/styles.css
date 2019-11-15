@@ -1,7 +1,7 @@
 @import url('variables.css');
 
 body.lightTheme{
-    background: var(--white);
+    background: var(--beige);
 }
 
 body.darkTheme{
@@ -11,6 +11,11 @@ body.darkTheme{
 .navbar{
     display: flex;
     justify-content: space-between;
+    top: 0;
+}
+#root section{
+    padding-top: 1rem;
+    margin: 4rem 0;
 }
 
 .navbarThemeText, #LoginThemeText{
@@ -60,6 +65,8 @@ body.darkTheme{
 
 .navbar{
     background-color: var(--black);
+    position: fixed;
+    width: 100%;
 }
 
 .navbar ul{
@@ -100,14 +107,26 @@ body.darkTheme{
 .episodeElement{
     width: 100%;
     overflow: auto;
-    width: 30%;
-    margin: 0.5rem;
+    width: 28%;
+    margin: 1.5rem;
     background-color: var(--cardBgrcolor);
     color: var(--cardFontColor)
 }
 
+.episodeTitle{
+    width: 70%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.episodeDesc{
+    padding: 1rem;
+    color: var(--Fontcolor);
+}
+
 .episodeElement a{
     color: var(--primaryHeading);
+    border-radius: 10px;
 }
 
 .episodeElement a:link{
@@ -126,4 +145,96 @@ body.darkTheme{
 .episodeElement img{
     width: 100%;
     overflow: auto;
+}
+
+.episodeDetailsHeader{
+    display: flex;
+    margin: 4rem;
+    background: var(--cardBgrcolor);
+}
+
+.imgContainer{
+    width: 50%;
+}
+
+.imgContainer img{
+    width: 75%;
+}
+
+.episodeDetailsTitle{
+    width: 50%;
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.episodeLabel{
+    color: var(--appBarFontcolor);
+    font-size: 2rem;
+}
+
+.episodeTitle{
+    color: var(--yellow);
+    font-size: 1.5rem;
+}
+
+.episodeDescription{
+    margin: 3rem;
+    background: var(--cardBgrcolor);
+    padding: 1rem;
+    color: var(--Fontcolor);
+}
+
+.episodeCharacters{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.charactersElement{
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 15rem;
+    margin: 4rem;
+    background: var(--cardBgrcolor);
+}
+
+.charactersElement a{
+    width: 50%;
+}
+
+.charactersElement p{
+    width: 50%;
+    margin: auto;
+    padding: 0 0.5rem;
+}
+
+.charactersElement img{
+    width: 50%;
+}
+
+.loadMoreButton{
+    position: absolute;
+    left: 50%;
+}
+
+.charactersList{
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--primaryHeading);
+}
+
+.charactersList a{
+    text-decoration: none;
+}
+
+.charactersList a:link{
+    color: var(--primaryHeading);
+    text-decoration: none;
+}
+.charactersList xa:active{
+    color: var(--primaryHeading);
+    text-decoration: none;
+}
+.charactersList a:visited{
+    color: var(--primaryHeading);
+    text-decoration: none;
 }
