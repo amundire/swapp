@@ -3,10 +3,12 @@
     --lightblue: #4bd5ee;
     --black: #000;
     --white: #fff;
+    --grey: #4e5b6e;
+    --beige: #abb1ba;
 }
 
 body.lightTheme{
-    --Bgrcolor: #E8EAED;
+    --Bgrcolor: #abb1ba;
     --Fontcolor: #4E5B6E;
 
     --cardBordercolor: #E5E9F2;

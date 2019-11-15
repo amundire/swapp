@@ -4,12 +4,10 @@ import { Link } from 'react-router-dom';
 
 const Starship = props => {
     return (
-        <Link to={`/starships/${props.id}`} key={props.id} id={props.id}>
-            <div className="starshipElement">
-                <p>{props.name}</p>
-                <img src={props.image}></img>
-            </div>
-        </Link>
+        <div className="starshipElement">
+            <Link to={`/starships/${props.id}`} key={props.id} id={props.id}><p>{props.name}</p></Link>
+            <img src={props.image}></img>
+        </div>
     )
 }
 
