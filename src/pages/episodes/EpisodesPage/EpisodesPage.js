@@ -9,7 +9,7 @@ const EpisodesPage = () => {
   });
 
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error on getting all episodes</p>;
+  if (error) return <p>Error on getting all episodes: {error}</p>;
   
   return (<EpisodesComponent data={data}/>
   )

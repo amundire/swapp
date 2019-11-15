@@ -12,7 +12,7 @@ const EpisodesDetailsPage = () => {
     });
 
     if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error getting episode</p>;
+    if (error) return <p>Error getting episode: {error}</p>;
 
     const {
         episode,

@@ -10,7 +10,7 @@ const CharactersPage = () => {
   });
 
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error on getting all episodes</p>;
+  if (error) return <p>Error on getting all episodes: {error}</p>;
 
   const allPeople = data.allPeople;
   const loadMore = () => {
@@ -23,7 +23,7 @@ const CharactersPage = () => {
         if (!data.allPeople.pageInfo.hasNextPage) {
           return prev;
         }
-        
+
         return {
           allPeople: {
             ...allPeople,
@@ -36,7 +36,7 @@ const CharactersPage = () => {
 
 
   return (
-      <CharactersComponent allPeople={allPeople} loadMore={loadMore}/>
+    <CharactersComponent allPeople={allPeople} loadMore={loadMore} />
   )
 }
 

@@ -9,7 +9,7 @@ const App = () => {
 
   //todo: stylize this white page garbage
   //todo: add theme toggling
-  //todo: finish starship details page + add the radarchart component
+  //todo: add the radarchart component
   //todo: tests
   //todo: remove unused imports
   //todo: lint

@@ -19,7 +19,7 @@ export const STARSHIP_QUERY = gql`
 
 export const STATS_QUERY = gql `
   query Stats($starshipClass: String) {
-    allStarships(first: 20, filter: { starshipClass: $starshipClass }) {
+    allStarships(first: 100, filter: { starshipClass: $starshipClass }) {
       totalCount
       edges {
         node {

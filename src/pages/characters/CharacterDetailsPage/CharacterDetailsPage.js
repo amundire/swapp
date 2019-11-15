@@ -12,7 +12,7 @@ const CharacterDetailsPage = () => {
     });
 
     if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error getting character</p>;
+    if (error) return <p>Error getting character: {error}</p>;
 
     return (
         <CharacterDetails data={data}/>
