@@ -1,0 +1,65 @@
+:root {
+    --yellow: #fff300;
+    --lightblue: #4bd5ee;
+    --black: #000;
+    --white: #fff;
+}
+
+body.lightTheme{
+    --Bgrcolor: #E8EAED;
+    --Fontcolor: #4E5B6E;
+
+    --cardBordercolor: #E5E9F2;
+    --cardBgrcolor: #FFF;
+
+    --solidBtnBgrcolor: #000;
+    --solidBtnBordercolor: #E5E9F2;
+    --solidBtnFontcolor:  ​#FFE300;
+
+    --outlineBtnBgrcolor: #EFF2F7;
+    --outlineBtnBordercolor: #E5E9F2;
+    --outlineBtnFontcolor: inherit;
+
+    --inputBgrcolor: ​#EFF2F7;
+    --inputBordercolor: #E5E9F2;
+    --inputFontcolor: ​#3C4858;
+
+    --appBarBgrcolor: #000;
+    --appBarBordercolor: #333;
+    --appBarFontcolor: #4BD5EE;
+
+    --primaryHeading: #4BD5EE;
+
+    --radarFontcolor: #4BD5EE;
+    --radarBgrcolor: #000;
+    --radarGridcolor: #3C4858;
+}
+
+body.darkTheme{
+    --Bgrcolor: ​#000;
+    --Fontcolor: #abb1ba;
+
+    --cardBordercolor: ​#333;
+    --cardBgrcolor: #3C4858;
+
+    --solidBtnBgrcolor: ​#4BD5EE;
+    --solidBtnBordercolor: none;
+    --solidBtnFontcolor:  ​#FFE300;
+
+    --outlineBtnBgrcolor: #333;
+    --outlineBtnFontcolor: inherit;
+
+    --inputBgrcolor: ​#FFF;
+    --inputBordercolor: ​#3C4858;
+    --inputFontcolor: ​#273444;
+
+    --appBarBgrcolor: #333;
+    --appBarBordercolor: #3C4858;
+    --appBarFontcolor: #4BD5EE;
+
+    --primaryHeading: #FFE300;
+
+    --radarFontcolor: #FFE300;
+    --radarBgrcolor: #000;
+    --radarGridcolor: #333;
+}

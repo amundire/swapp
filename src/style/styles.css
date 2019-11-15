@@ -1,0 +1,129 @@
+@import url('variables.css');
+
+body.lightTheme{
+    background: var(--white);
+}
+
+body.darkTheme{
+    background: var(--black);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbarThemeText, #LoginThemeText{
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    cursor: pointer;
+}
+
+#LoginFormGroup{
+    width: 50%;
+    margin: 0 auto;
+    background:black;
+    margin-top: 2rem;
+}
+
+#LoginThemeText{
+    color: var(--yellow);
+    font-size: 6rem;
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+}
+
+#LoginForm{
+    width: 50%;
+    margin: 0 auto;
+    background: var(--cardBgrcolor);
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+}
+
+#LoginForm input{
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+#LoginForm button{
+    padding: 0.5rem;
+    margin-left: 15rem;
+    background-color: var(--solidBtnBgrcolor);
+    color: var(--yellow);
+}
+
+.navbar{
+    background-color: var(--black);
+}
+
+.navbar ul{
+    display: flex;
+    list-style-type: none;
+    color: var(--appBarFontcolor);
+}
+
+.navbar ul li{
+    margin: 1rem;
+}
+
+.navbarThemeText{
+    color: var(--yellow);
+    width: 15%;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}
+
+.navbar a:link{
+    color: var(--appBarFontcolor);
+    text-decoration: none;
+}
+.navbar a:active{
+    color: var(--appBarFontcolor);
+    text-decoration: none;
+}
+.navbar a:visited{
+    color: var(--appBarFontcolor);
+    text-decoration: none;
+}
+
+#episodesList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.episodeElement{
+    width: 100%;
+    overflow: auto;
+    width: 30%;
+    margin: 0.5rem;
+    background-color: var(--cardBgrcolor);
+    color: var(--cardFontColor)
+}
+
+.episodeElement a{
+    color: var(--primaryHeading);
+}
+
+.episodeElement a:link{
+    color: var(--primaryHeading);
+    text-decoration: none;
+}
+.episodeElement a:active{
+    color: var(--primaryHeading);
+    text-decoration: none;
+}
+.episodeElement a:visited{
+    color: var(--primaryHeading);
+    text-decoration: none;
+}
+
+.episodeElement img{
+    width: 100%;
+    overflow: auto;
+}
