@@ -8,7 +8,6 @@ import client from './api/index';
 const App = () => {
 
   //todo: stylize this white page garbage
-  //todo: add theme toggling
   //todo: tests
   //todo: remove unused imports
   //todo: lint

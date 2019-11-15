@@ -1,22 +1,18 @@
 import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
-import gql from 'graphql-tag.macro';
+import AUTH_MUTATION from './api/requester'
 import Signin from './Signin';
 import Pages from './pages/index';
 import Header from './components/common/Header';
 import { Redirect } from 'react-router-dom';
 
-export const AUTH_MUTATION = gql`
-  query IsAuthenticated {
-    authenticated @client
-  }
-`;
+
 
 const Home = () => {
     const isAuth = useQuery(AUTH_MUTATION).data;
 
     const storedTheme = localStorage.getItem('theme');
-    let [theme, setTheme] = React.useState(storedTheme || 'lightTheme');
+    let [currentTheme, setTheme] = React.useState(storedTheme || 'lightTheme');
 
     const themeToggle = () => {
         const newTheme = theme === 'lightTheme' ? 'darkTheme' : 'lightTheme';
@@ -26,7 +22,7 @@ const Home = () => {
 
     React.useEffect(() => {
         document.body.classList = theme;
-    }, [theme]);
+    }, [currentTheme]);
 
     return isAuth.authenticated ?
         (
