@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CharactersPage /> renders without crashing 1`] = `
+<section
+  id="charactersPage"
+>
+  <div
+    className="charactersList"
+  >
+    <Character
+      id="people.1"
+      image="https://links.gunaxin.com/content/images/post_images/Luke_Skywalker_039_s_Original_039_Star_Wars_039_Lightsaber_Is_Going_Up_For_Auction_1544116268_4528.jpg"
+      name="Luke Skywalker"
+    />
+  </div>
+  <button
+    className="loadMoreButton"
+  >
+    Load More
+  </button>
+</section>
+`;
