@@ -51,6 +51,7 @@ const RadarChartComponent = ({ starship }) => {
                 hyperdriveRating: starship.hyperdriveRating / maxValues.hyperdriveRating,
                 crew: starship.crew / maxValues.crew,
             },
+            meta: { color: '#4bd5ee' },
         }
     ]
 
