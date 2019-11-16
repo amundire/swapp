@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StarshipDetails /> renders without crashing 1`] = `
+<section
+  id="starshipDetails"
+>
+  <p
+    className="starshipTitle"
+  >
+    X-wing
+  </p>
+  <p
+    className="starshipModel"
+  >
+    X-wing
+  </p>
+  <div
+    className="StarshipDivider"
+  >
+    <div
+      className="starshipDetailsLeft"
+    >
+      <p
+        className="starshipName"
+      >
+        X-wing
+      </p>
+      <img
+        alt="starship image"
+        src="https://static.turbosquid.com/Preview/2015/10/14__02_29_23/xwingtopleft_01_open_01.jpgb5dc9c7c-25bc-44f8-88ba-50e41873111aOriginal.jpg"
+      />
+      <p
+        className="starshipStat"
+      >
+        Class: 
+        <span
+          className="starshipStatParam"
+        >
+          starfighter
+        </span>
+      </p>
+      <p
+        className="starshipStat"
+      >
+        Cost: 
+        <span
+          className="starshipStatParam"
+        >
+          149999
+        </span>
+      </p>
+      <p
+        className="starshipStat"
+      >
+        Crew: 
+        <span
+          className="starshipStatParam"
+        >
+          1
+        </span>
+      </p>
+      <p
+        className="starshipStat"
+      >
+        Max atmospheric speed: 
+        <span
+          className="starshipStatParam"
+        >
+          1050
+        </span>
+      </p>
+      <p
+        className="starshipStat"
+      >
+        Hyperdrive rating: 
+        <span
+          className="starshipStatParam"
+        >
+          1
+        </span>
+      </p>
+    </div>
+    <div
+      className="starshipDetailsRight"
+    >
+      <RadarChartComponent
+        starship={
+          Object {
+            "cost": 149999,
+            "crew": 1,
+            "hyperdriveRating": 1,
+            "id": "starships.1",
+            "image": "https://static.turbosquid.com/Preview/2015/10/14__02_29_23/xwingtopleft_01_open_01.jpgb5dc9c7c-25bc-44f8-88ba-50e41873111aOriginal.jpg",
+            "maxAtmosphericSpeed": 1050,
+            "maxMLPerHour": 100,
+            "model": "X-wing",
+            "name": "X-wing",
+            "starshipClass": "starfighter",
+          }
+        }
+      />
+    </div>
+  </div>
+</section>
+`;

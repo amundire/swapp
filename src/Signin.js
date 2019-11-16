@@ -38,10 +38,10 @@ const Signin = (props) => {
                 <input type="password" placeholder="********" name="password" onChange={e => setPassword(e.target.value)}>
                 </input>
                 <button type="submit" onClick={handleSubmit}>login</button>
+                {error ? (<p className="errorMessage">{error.message}</p>) : null}
             </form>
         </div>
     )
-
 }
 
 export default Signin;

@@ -10,6 +10,23 @@ body.darkTheme{
     background: var(--black);
 }
 
+body button{
+    border: none;
+    border-radius: 10px;
+    font-weight: bolder;
+    padding: 0.5rem;
+}
+
+body.darkTheme button{
+    background: var(--lightblue) !important;
+    color: var(--yellow) !important;
+}
+
+body.lightTheme button{
+    background: var(--yellow) !important;
+    color: var(--lightblue) !important;
+}
+
 .navbarThemeText, #LoginThemeText{
     font-family: starwars-regular;
 }
@@ -30,6 +47,10 @@ body.darkTheme{
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
     cursor: pointer;
+}
+
+.errorMessage{
+    color: red;
 }
 
 #LoginFormGroup{
