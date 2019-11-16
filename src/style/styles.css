@@ -1,4 +1,6 @@
 @import url('variables.css');
+@import url('reset.css');
+@import url('responsive.css');
 
 body.lightTheme{
     background: var(--beige);
@@ -6,6 +8,10 @@ body.lightTheme{
 
 body.darkTheme{
     background: var(--black);
+}
+
+.navbarThemeText, #LoginThemeText{
+    font-family: starwars-regular;
 }
 
 .navbar{
@@ -329,4 +335,55 @@ body.darkTheme{
 
 .starshipsTitle{
     color: var(--Fontcolor);
+}
+
+.starshipTitle{
+    text-align: center;
+    color: var(--primaryHeading);
+    font-size: 2rem;
+}
+
+.starshipModel{
+    color: var(--appBarFontcolor);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.starshipDetailsLeft{
+    display: flex;
+    flex-direction: column;
+    margin: 4rem;
+    background-color:    var(--cardBgrcolor);
+    padding: 1rem;
+    width: 35% !important;
+    border-radius: 10px;
+}
+
+.starshipDetailsLeft > img{
+    max-width: 20rem;
+    max-height: 20rem;
+}
+
+.starshipDetailsLeft p {
+    color: var(--Fontcolor);
+}
+
+.StarshipDivider{
+    display: flex;  
+}
+
+.starshipName{
+    color: var(--primaryHeading) !important;
+}
+
+.starship-radar-chart{
+    margin-top: 5rem;
+}
+.starship-radar-chart svg{
+    background: var(--black);
+    position: initial;
+}
+
+.caption{
+    fill: var(--primaryHeading);
 }

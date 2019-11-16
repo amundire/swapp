@@ -1,1 +1,51 @@
-/* todo: this
+@media screen and (max-width: 900px){
+    .episodeElement{
+        width: 40% !important;
+    }
+    #LoginForm > button {
+        margin-left: 8rem !important;
+    }
+    .characterDetailsDivisor{
+        flex-direction: column;
+    }
+    .characterDetailsDivisor div{
+        width: 80% !important;
+    }
+    .characterDetailsRight{
+        margin: 0 auto;
+    }
+    .starshipsTitle{
+        margin: 2rem;
+    }
+    .StarshipDivider{
+        flex-direction: column;
+    }
+    .starshipDivider div{
+        width: auto;
+    }
+    .starship-radar-chart svg{
+        position: absolute !important;
+        left: 25%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .episodeElement{
+        width: 80% !important;
+    }
+    .episodeDetailsHeader{
+        flex-direction: column;
+    }
+    .imgContainer{
+        width: 133% !important;
+    }
+    .imgContainer img{
+        width: 75%;
+    }
+    .episodeDetailsTitle{
+        width: auto !important;
+    }
+    .characterDetailsLeft{
+        margin: 2rem !important;
+    }
+}
